@@ -4,5 +4,5 @@ filename=$(basename "$1")
 zippath="$DIR/$filename"
 
 wget $1 -P $DIR
-unzip $zippath -d $DIR
+unzip -o $zippath -d $DIR
 rm $zippath
