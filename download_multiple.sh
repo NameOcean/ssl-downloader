@@ -23,4 +23,4 @@ do
   rm $zippath
 done < "$input"
 
-if [ "$RELOAD_NGINX" ]; then echo "reload"; fi
+if [ "$RELOAD_NGINX" ]; then /etc/init.d/nginx reload; fi
