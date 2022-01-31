@@ -18,7 +18,7 @@ while IFS= read -r val
 do
   filename=$(basename "$val")
   zippath="$DIR/$filename"
-  wget $val -P $DIR
+  wget --no-check-certificate $val -P $DIR
   unzip -o $zippath -d $DIR
   rm $zippath
 done < "$input"
