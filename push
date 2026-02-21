@@ -1,4 +1,0 @@
-#!/bin/bash
-git push origin master
-git push proxmox2
-git push neo
