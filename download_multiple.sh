@@ -20,6 +20,10 @@ do
   zippath="$DIR/$filename"
   wget --no-check-certificate $val -P $DIR
   unzip -o $zippath -d $DIR
+  if [ -d "$DIR/live" ]; then
+      cp -a "$DIR/live/." "$DIR/"
+      rm -rf "$DIR/live"
+  fi
   rm $zippath
 done < "$input"
 
